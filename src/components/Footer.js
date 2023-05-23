@@ -1,5 +1,6 @@
 import React from 'react'
 import "../stylesheets/footer.css";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -29,10 +30,10 @@ const Footer = () => {
   
               <ul class="list-unstyled mb-0">
                 <li className='nav-item'>
-                  <a href="#!" class="text-white nav-link">Beranda</a>
+                  <Link to="/" class="text-white nav-link">Beranda</Link>
                 </li>
                 <li className='nav-item'>
-                  <a href="#!" class="text-white nav-link">Tentang</a>
+                  <Link to="/tentang" class="text-white nav-link">Tentang</Link>
                 </li>
               </ul>
             </div>
@@ -42,10 +43,10 @@ const Footer = () => {
   
               <ul class="list-unstyled mb-0">
                 <li className='nav-item'>
-                  <a href="#!" class="text-white nav-link">Resep</a>
+                  <Link to="/login" class="text-white nav-link">Resep</Link>
                 </li>
                 <li className='nav-item'>
-                  <a href="#!" class="text-white nav-link">Pengukur</a>
+                  <Link to="/login" class="text-white nav-link">Pengukur</Link>
                 </li>
               </ul>
             </div>
@@ -55,10 +56,10 @@ const Footer = () => {
   
               <ul class="list-unstyled mb-0">
                 <li className='nav-item'>
-                  <a href="#!" class="text-white nav-link">Register</a>
+                  <Link to="/register" class="text-white nav-link">Register</Link>
                 </li>
                 <li className='nav-item'>
-                  <a href="#!" class="text-white nav-link">Login</a>
+                  <Link to="/login" class="text-white nav-link">Login</Link>
                 </li>
               </ul>
             </div>

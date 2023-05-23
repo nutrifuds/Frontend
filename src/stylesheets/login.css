@@ -1,0 +1,61 @@
+.custom__title{
+    color: #668F4D;
+}
+.garis{
+position: absolute;
+display: flex;
+width: 156px;
+height: 4px;
+
+background: rgba(112, 219, 122, 0.5);
+}
+.custom__desc,.form-label{
+    color: #868B90;
+}
+.split-background {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .left-side {
+    flex: 1;
+    background-color: #F1F8FE ;
+  }
+  
+  .right-side {
+    flex: 1;
+    background-image: url(../img/BG_Hero.png);
+    background-size: cover;
+  }
+  .custom__input, .custom__btn{
+    height: 40px;
+    width: 250px;
+    border-radius: 12px;
+  }
+  .custom__forget{
+    font-style: italic;
+    font-size: 14px;
+    text-decoration: underline;
+    color: #868B90;
+  }
+  .custom__new{
+    font-style: italic;
+    font-size: 14px;
+    color: #868B90;
+    font-family: Arial;
+  }
+  
+.card__log{
+    width: 25rem;
+    height: 25rem;
+}
+  @media (max-width: 768px) {
+    .split-background {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .right-side {
+      display: none;
+    }
+  }

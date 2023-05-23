@@ -1,9 +1,7 @@
-.btn{
-    margin:5px;
-}
-.custom-button{
-    border-radius: 25px ;
-}
-.nav-item .nav-link{
-    color: black;
-}
+.image {
+    background-color: #490D40;
+    background: url(../img/BG_Hero.png) no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+ }
+

@@ -1,0 +1,17 @@
+.btn{
+    margin:5px;
+}
+
+.nav-item .nav-link{
+    color: white;
+}
+
+.nav-item a:hover{
+    color: #668F4D;
+}
+
+.navbar{
+    border: none;
+    color: white;
+    transition: background-color 1s ease 0s;
+}

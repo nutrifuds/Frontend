@@ -1,8 +1,36 @@
-import React from "react";
+import React, {useState} from "react";
 import "../stylesheets/register.css";
 import Logo from "../img/logo_login.png";
+import { auth }from "../function/firebase" ;
+import { useNavigate } from 'react-router-dom';
+import {  createUserWithEmailAndPassword  } from 'firebase/auth';
 
 function Register() {
+  const navigate = useNavigate();
+ 
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('');
+ 
+    const onSubmit = async (e) => {
+      e.preventDefault()
+     
+      await createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            // Signed in
+            const user = userCredential.user;
+            console.log(user);
+            navigate("/login")
+            // ...
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.log(errorCode, errorMessage);
+            // ..
+        });
+ 
+   
+    }
   return (
     <div>
       <div className="split-background">
@@ -24,12 +52,17 @@ function Register() {
               <form className="container">
                 <div class="mb-3">
                   <label for="text" class="form-label">
-                    Username
+                    Email Address
                   </label>
                   <input
-                    type="text"
+                    type="email"
+                    label="Email Address"
+                    placeholder="masukkan alamat email"
                     class="form-control custom__input"
                     aria-describedby="textUsername"
+                    value={email}
+                                onChange={(e) => setEmail(e.target.value)}  
+                                required  
                   />
                 </div>
                 <div class="mb-3">
@@ -40,6 +73,11 @@ function Register() {
                     type="password"
                     class="form-control custom__input"
                     id="exampleInputPassword1"
+                    label="Create password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)} 
+                                required                                 
+                                placeholder="Password"  
                   />
                 </div>
                 <div class="mb-3">
@@ -50,10 +88,11 @@ function Register() {
                   type="password"
                   class="form-control custom__input"
                   id="exampleInputPassword1"
+                  placeholder="Ulangi Password"  
                 />
               </div>
                 
-                <button type="submit" class="btn btn-primary custom__btn">
+                <button type="submit" class="btn btn-primary custom__btn" onClick={onSubmit}    >
                   Daftar
                 </button>
               </form>

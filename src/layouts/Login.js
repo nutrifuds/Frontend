@@ -1,9 +1,32 @@
-import React from "react";
+import React, {useState} from "react";
 import "../stylesheets/login.css";
 import Logo from "../img/logo_login.png";
 import { Link } from "react-router-dom";
+import { auth } from "../function/firebase"
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 function Register() {
+  const navigate = useNavigate();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+     
+  const onLogin = (e) => {
+      e.preventDefault();
+      signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+          // Signed in
+          const user = userCredential.user;
+          navigate("/dashboard")
+          console.log(user);
+      })
+      .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          console.log(errorCode, errorMessage)
+      });
+     
+  }
   return (
     <div>
       <div className="split-background">
@@ -26,12 +49,16 @@ function Register() {
               <form className="container">
                 <div class="mb-3">
                   <label for="text" class="form-label">
-                    Username
+                    Masukkan Email
                   </label>
                   <input
-                    type="text"
+                  id="email-address"
+                    type="email"
                     class="form-control custom__input"
                     aria-describedby="textUsername"
+                    required
+                    placeholder="masukkan E-mail"
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
                 <div class="mb-3">
@@ -42,10 +69,13 @@ function Register() {
                     type="password"
                     class="form-control custom__input"
                     id="exampleInputPassword1"
+                    required
+                    placeholder="Password"
+                    onChange={(e)=>setPassword(e.target.value)}
                   />
                 </div>
                 <p><a href="/" className="nav-link text-end px-5 custom__forget">Lupa Password ?</a></p>
-                <button type="submit" class="btn btn-primary custom__btn">
+                <button type="submit" class="btn btn-primary custom__btn" onClick={onLogin}>
                   Masuk
                 </button>
                 <hr/>

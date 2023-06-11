@@ -10,6 +10,7 @@ height: 4px;
 background: rgba(112, 219, 122, 0.5);
 }
 .custom__desc,.form-label{
+    font-size: 18px;
     color: #868B90;
 }
 .split-background {
@@ -48,14 +49,44 @@ background: rgba(112, 219, 122, 0.5);
 .card__log{
     width: 25rem;
     height: 25rem;
+    margin: 12px;
 }
   @media (max-width: 768px) {
-    .split-background {
-      flex-direction: column;
-      height: auto;
+    .cstm-mx{
+      margin-right: 0rem!important;
+      margin-left: 0rem!important;
+  }
+  .custom__desc{
+    font-size: 12px;
+  }
+    .form-label{
+      background-color: #fff;
     }
-  
+    *{
+      margin: 0px;
+      padding: 0px;
+    }
+    .custom__input, .custom__btn{
+      height: 35px;
+      width: 250px;
+      border-radius: 12px;
+    }
+
+    .split-background {
+      display: flex;
+      height: 100vh;
+    }
+   
     .right-side {
       display: none;
+    }
+    .card__log{
+      width: 20rem;
+    height: 23rem;
+    }
+    .card__log form{
+      padding: 0px;
+      margin: 0px;
+
     }
   }

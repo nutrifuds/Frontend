@@ -31,6 +31,7 @@
 
 .features__title{
     color: white;
+    font-size: 2.5vw;
 }
 
 .card{
@@ -41,3 +42,39 @@
     background-color: #668F4D !important;
     color: white;
 }
+.cstm-textinfo{
+    font-size: 2vw;
+}
+@media only screen and (max-width: 768px) {
+    .cstm-card-side{
+        display: none;
+    }
+    .cstm-textinfo{
+        font-size: 14px;
+    }
+    br{
+        display: none;
+    }
+    .heading{
+        font-size: 38px;
+
+    }
+    .heading-info{
+        font-size: 18px;
+        padding-top: 8px;
+
+    }
+    .cstm-btn {
+        width: 200px;
+        font-size: 1rem ;
+        align-items: start;
+        text-align: center;
+        
+    }
+    .feature__title{
+        margin-top: 24px;
+    }
+   
+  }
+
+  

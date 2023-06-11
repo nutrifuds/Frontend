@@ -15,7 +15,7 @@ const Tentang = () => {
       <div className="image">
         <div className="container text-center">
           <h1 class="heading-tentang">TENTANG KAMI</h1>
-          <p class="heading-info">
+          <p class="heading-info cstm-info-tentang">
             Website Ini Dibuat Untuk Memenuhi Tugas Akhir (Capstone Project)
             Dari <br/>
             Program Studi Independent Batch 4 dicoding, jadi kami terdiri dari 4

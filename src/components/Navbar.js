@@ -27,15 +27,15 @@ const Navbar = () => {
   return (
     <div>
       <nav
-        class="navbar navbar-expand-lg fixed-top navbar-dark navbar-scroll py-3"
+        className="navbar navbar-expand-lg fixed-top navbar-dark navbar-scroll py-3"
         style={{ backgroundColor: navbarBg }}
       >
-        <div class="container container-fluid">
-          <a class="navbar-brand fw-bold" href="#">
+        <div className="container container-fluid">
+          <a className="navbar-brand fw-bold" href="#">
             Nutrifuds
           </a>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
@@ -43,40 +43,40 @@ const Navbar = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <Link to="/" class="nav-link">
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <Link to="/" className="nav-link">
                   Beranda
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link to="/login" class="nav-link">
+              <li className="nav-item">
+                <Link to="/login" className="nav-link">
                   Pengukur
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link to="/login" class="nav-link" href="#">
+              <li className="nav-item">
+                <Link to="/login" className="nav-link" href="#">
                   Resep
                 </Link>
               </li>
-              <li class="nav-item">
+              <li className="nav-item">
                 <a>
-                  <Link to="/tentang" class="nav-link">
+                  <Link to="/tentang" className="nav-link">
                     Tentang
                   </Link>
                 </a>
               </li>
             </ul>
             <Link to="/login">
-            <button class="btn btn-outline-light rounded-pill" type="submit">
+            <button className="btn btn-outline-light rounded-pill" type="submit">
               Masuk
             </button>
             </Link>
             <Link to="/register">
-              <button class="btn btn-success rounded-pill " type="submit">
+              <button className="btn btn-success rounded-pill " type="submit">
                 Daftar
               </button>
             </Link>

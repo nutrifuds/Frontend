@@ -31,7 +31,7 @@ function Register() {
     <div>
       <div className="split-background">
         <div className="left-side">
-          <div className="container mx-5">
+          <div className="container mx-5 cstm-mx">
             <img
               className=" mt-5 "
               src={Logo}
@@ -41,11 +41,11 @@ function Register() {
 
             <h2 className="container mt-5 custom__title">Masuk <span className="garis"/></h2>
             <p className="container mt-3 mb-4 custom__desc">
-              Silahkan masuk untuk mendapatkan fitur-fitur yang <br />
+              Silahkan masuk untuk mendapatkan fitur-fitur yang <br/>
               lebih lengkap serta lacak progres anda !
             </p>
 
-            <div className="card p-5 card__log">
+            <div className="card p-3 p-md-4 p-lg-5 card__log">
               <form className="container">
                 <div class="mb-3">
                   <label for="text" class="form-label">

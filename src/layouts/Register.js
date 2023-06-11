@@ -35,7 +35,7 @@ function Register() {
     <div>
       <div className="split-background">
         <div className="left-side" style={{backgroundColor: '#FEF1FC'}}>
-          <div className="container mx-5">
+          <div className="container mx-5 cstm-mx">
             <img
               className=" mt-5 "
               src={Logo}

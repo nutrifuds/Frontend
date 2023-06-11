@@ -4,10 +4,11 @@ import Logo from "../img/logo_login.png";
 import { Link } from "react-router-dom";
 import { auth } from "../function/firebase"
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
+
 
 function Register() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
      
@@ -17,7 +18,8 @@ function Register() {
       .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          navigate("/dashboard")
+          // navigate('/register')
+          window.location.href = 'https://www.youtube.com/watch?v=RI9kAPUecKQ';
           console.log(user);
       })
       .catch((error) => {

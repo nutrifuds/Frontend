@@ -5,6 +5,7 @@ import Fitur1 from "../img/Fitur2 1.png";
 import Fitur2 from "../img/Fitur2 2.png";
 import Watermelon from "../img/fruit-watermelon.png";
 import maleHeight from "../img/male-height.png";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   return (
@@ -13,7 +14,7 @@ const HomePage = () => {
         <div className="container text-center">
           <h1 className="heading">
             DAFTAR RESEP MAKANAN <br></br>
-            DAN PENGUKUR KALORI
+            DAN PENGUKUR BMI
           </h1>
           <p className="heading-info">
             Website Ini Menyediakan Resep Makanan Sehat Untuk Anda yang
@@ -24,10 +25,12 @@ const HomePage = () => {
             className="cstm-btn btn btn-outline-light rounded-pill m-3 btn-lg px-5 "
             type="submit"
           >
+          <Link to="/login" className="text-white nav-link">
             Mulai
             <span className="material-symbols-outlined align-middle px-2">
               arrow_right_alt
             </span>
+            </Link>
           </button>
         </div>
       </div>
@@ -112,9 +115,9 @@ const HomePage = () => {
           <div className="col-sm-6">
             <div className="card card__description">
               <div className="card-body">
-                <h3 className="card-title py-3">Resep Makanan</h3>
+                <h3 className="card-title py-3">Daftar Resep</h3>
                 <p className="card-text">
-                  Mari kita jelajahi beragam resep makanan yang sehat dan dapat
+                  Mari kita jelajahi beragam resep yang sehat dan dapat
                   disesuaikan dengan keinginan dan preferensi Anda. Dengan
                   memperhatikan kebutuhan nutrisi dan cita rasa yang lezat,
                   resep makanan ini memberikan pilihan yang ideal bagi mereka
@@ -124,9 +127,9 @@ const HomePage = () => {
                   memuaskan dan bergizi untuk dinikmati oleh keluarga dan
                   teman-teman.
                 </p>
-                <a href="#" className="btn btn-success">
+                <Link to="/login" className=" btn btn-success">
                   Lihat Resep
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -136,13 +139,13 @@ const HomePage = () => {
           <div className="col-sm-6 mb-3 mb-sm-0">
           <div className="card card__description">
           <div className="card-body">
-            <h3 className="card-title py-3">Pengukur Kalori</h3>
+            <h3 className="card-title py-3">Pengukur BMI</h3>
             <p className="card-text">
             Mari kita mengukur Body Mass Index (BMI) Anda, sebuah indikator yang digunakan untuk mengevaluasi apakah berat badan Anda sejalan dengan tinggi badan Anda. Dengan mengukur BMI, Anda dapat memperoleh informasi penting mengenai kesehatan dan komposisi tubuh Anda. Pengukuran BMI ini memberikan gambaran awal tentang kisaran berat badan yang sehat bagi Anda, sehingga Anda dapat mengambil langkah-langkah yang diperlukan.
             </p>
-            <a href="#" className="btn btn-success">
+            <Link to="/login" className="btn btn-success">
               Lihat Pengukur
-            </a>
+            </Link>
           </div>
         </div>
           </div>

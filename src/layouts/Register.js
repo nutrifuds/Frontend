@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import "../stylesheets/register.css";
 import Logo from "../img/logo_login.png";
 import { auth }from "../function/firebase" ;
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import {  createUserWithEmailAndPassword  } from 'firebase/auth';
 
 function Register() {
@@ -36,12 +36,13 @@ function Register() {
       <div className="split-background">
         <div className="left-side" style={{backgroundColor: '#FEF1FC'}}>
           <div className="container mx-5 cstm-mx">
+          <Link to="/">
             <img
               className=" mt-5 "
               src={Logo}
               style={{ width: "10rem" }}
               alt="logo"
-            />
+            /></Link>
 
             <h2 className="container mt-5 custom__title">Daftar<span className="garis"/></h2>
             <p className="container mt-3 mb-4 custom__desc">

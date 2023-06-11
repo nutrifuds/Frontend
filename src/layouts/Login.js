@@ -19,7 +19,7 @@ function Register() {
           // Signed in
           const user = userCredential.user;
           // navigate('/register')
-          window.location.href = 'https://www.youtube.com/watch?v=RI9kAPUecKQ';
+          window.location.href = 'https://dashboardnutrifuds.netlify.app/';
           console.log(user);
       })
       .catch((error) => {
@@ -34,12 +34,13 @@ function Register() {
       <div className="split-background">
         <div className="left-side">
           <div className="container mx-5 cstm-mx">
+          <Link to="/">
             <img
               className=" mt-5 "
               src={Logo}
               style={{ width: "10rem" }}
               alt="logo"
-            />
+            /></Link>
 
             <h2 className="container mt-5 custom__title">Masuk <span className="garis"/></h2>
             <p className="container mt-3 mb-4 custom__desc">

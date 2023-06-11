@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import "../stylesheets/navbar.css";
 import { Link } from "react-router-dom";
+import Logo from "../img/logo_wht.png";
 
 const Navbar = () => {
   const [navbarBg, setNavbarBg] = useState("transparent");
@@ -31,9 +32,15 @@ const Navbar = () => {
         style={{ backgroundColor: navbarBg }}
       >
         <div className="container container-fluid">
-          <a className="navbar-brand fw-bold" href="#">
-            Nutrifuds
-          </a>
+        <Link to="/">
+        <a className="navbar-brand fw-bold" href="#">
+        <img
+          src={Logo}
+          style={{ width: "10rem" }}
+          alt="logo"
+        />
+           
+          </a></Link>
           <button
             className="navbar-toggler"
             type="button"
